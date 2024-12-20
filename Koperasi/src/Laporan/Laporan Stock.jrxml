@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="35221d55-8420-47e3-98fb-d773912b6332">
+	<property name="ireport.zoom" value="1.2100000000000009"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     stock.`ID_Barang` AS stock_ID_Barang,
+     stock.`Nama_Barang` AS stock_Nama_Barang,
+     stock.`Satuan` AS stock_Satuan,
+     stock.`Stock` AS stock_Stock,
+     stock.`Tanggal` AS stock_Tanggal
+FROM
+     `stock` stock]]>
+	</queryString>
+	<field name="stock_ID_Barang" class="java.lang.String"/>
+	<field name="stock_Nama_Barang" class="java.lang.String"/>
+	<field name="stock_Satuan" class="java.lang.String"/>
+	<field name="stock_Stock" class="java.lang.String"/>
+	<field name="stock_Tanggal" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="105" splitType="Stretch">
+			<image>
+				<reportElement x="1" y="8" width="78" height="85" uuid="ff74ba07-1ffa-48b8-bf63-21949e8c2f8f"/>
+				<imageExpression><![CDATA["D:\\Laporan KKP\\Logo\\Logo_80x80__1_-removebg-preview.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="92" y="81" width="420" height="1" uuid="77f19217-d608-45c2-803c-7adb3687fdc4"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="79" y="88" width="443" height="1" uuid="c4b7da05-3e80-49ea-8a0e-7bacd39f60ff"/>
+			</line>
+			<staticText>
+				<reportElement x="57" y="-7" width="495" height="26" uuid="625e1135-750b-41f0-9b90-c1f15a116a2e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="21" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KEMENTERIAN AGAMA REPUBLIK INDONESIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="11" width="495" height="26" uuid="89d89b81-0956-4723-a8f9-c6d5b4c26714"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KANTOR KEMENTERIAN AGAMA KOTA JAKARTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="96" y="28" width="387" height="26" uuid="af50ac0b-bbe3-421f-97d9-50bef647fb15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MADRASAH TSANAWIYAH NEGERI 1 JAKARTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="43" width="348" height="26" uuid="513e73b2-bf35-4079-a9ad-882c33428469"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[JL.Bangka IX B, No.26 RT.012/RW.010, Pela Mampang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="84" y="54" width="428" height="26" uuid="db4bbb82-3b70-4780-aebe-e13aecb3d153"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Kec.Mampang Prapatan, Kota Jakarta Selatan,Daerah Khusus Ibukota Jakarta, 12720]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="a641f853-1eba-4953-9b8f-b47230115049"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="111" height="15" forecolor="#736343" uuid="284b1c2e-e0f4-4809-acef-d4c5e6c26b9e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ID Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="111" y="0" width="111" height="15" forecolor="#736343" uuid="06a72903-88e9-4e7b-8ea5-9c32f08c327a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nama Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="222" y="0" width="111" height="15" forecolor="#736343" uuid="4330567e-8126-4577-b4d5-10657e3632b3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Satuan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="333" y="0" width="111" height="15" forecolor="#736343" uuid="255bf5b9-5745-4c32-8216-dab26c2ed568"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Stock]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="444" y="0" width="111" height="15" forecolor="#736343" uuid="9f02aa97-d041-4803-a018-02637c32b9ff"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="15" uuid="4145ec0f-46a1-4782-8b17-04a64c6b44d3"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="111" height="15" uuid="1a04840c-e841-4dde-ad2b-669557b5b264"/>
+					<textFieldExpression><![CDATA[$F{stock_ID_Barang}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="111" y="0" width="111" height="15" uuid="21a3c502-b3e1-4537-83ba-56818259840e"/>
+					<textFieldExpression><![CDATA[$F{stock_Nama_Barang}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="222" y="0" width="111" height="15" uuid="6d8d6557-c8f4-4716-972c-ba74f416528f"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{stock_Satuan}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="333" y="0" width="111" height="15" uuid="e048d5f4-6e06-46f8-973f-27c9675d27ad"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{stock_Stock}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="444" y="0" width="111" height="15" uuid="d2da9500-008a-43b3-8be1-849f513856c5"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{stock_Tanggal}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="109" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="b6c80a3d-f721-4603-9c59-32c27b693c29"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="386" y="4" width="166" height="20" uuid="5b29416a-130d-422d-b924-4801f9517c75"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Jakarta,    Rabu 15 Agustus  2024]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="23" width="100" height="20" uuid="97942427-992f-43be-a4cd-73d0d823b368"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Admin Koperasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="89" width="96" height="20" uuid="56d15701-6c7b-4c55-ae55-2c92860c088a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[(Lahmudin S.T,.MM.)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="432" y="24" width="100" height="20" uuid="a08c2cac-9e14-48a0-801a-767274e6b637"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Kepala Sekolah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="409" y="89" width="136" height="20" uuid="da2adc82-7dfa-4592-9867-09b7f77e7871"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[(Dra. Hj. Yeni Triasih, M.pd.)]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="597" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="6c823be8-3f59-4b7b-ad96-e147f13059d4"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="533" y="0" width="40" height="20" forecolor="#736343" uuid="0fc89dd0-8f22-4dec-9471-46683f5aac0c"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="453" y="0" width="80" height="20" forecolor="#736343" uuid="b72782c2-fea0-4cf2-ab77-eabb6b64bde1"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="7fa0745f-0497-48e7-838b-af9ff0b644a8"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
